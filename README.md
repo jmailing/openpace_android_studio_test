@@ -21,4 +21,3 @@ test -x configure || autoreconf --verbose --install
 make android
 
 exit
-

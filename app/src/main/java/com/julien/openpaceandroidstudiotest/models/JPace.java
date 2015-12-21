@@ -16,11 +16,17 @@
  * You should have received a copy of the GNU General Public License along with
  * OpenPACE.  If not, see <http://www.gnu.org/licenses/>.
  */
-
+ 
+package com.julien.openpaceandroidstudiotest.models;
 import java.math.BigInteger;
 
 class PACEEntity {
-    protected /SWIGTYPE_p_PACE_SEC secret;
+
+    static {
+        System.loadLibrary("eac");
+
+    }
+    protected SWIGTYPE_p_PACE_SEC secret;
     protected SWIGTYPE_p_BUF_MEM encoded_nonce;
     protected SWIGTYPE_p_EAC_CTX eac_context;
     protected SWIGTYPE_p_BUF_MEM static_key;
