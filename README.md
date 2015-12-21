@@ -1,23 +1,14 @@
-WORK IN PROGRESS
+# WORK IN PROGRESS - Not yet functional
 
-This project might evolve in a more consequent BAC/PACE passport reader. For now, I have had (still do) a few problems for compiling and installing Open PACE and make sure I am able to use it in Android Studio. I will try to make it work and report my findings there.
+This project might evolve in a more consequent BAC/PACE passport reader.
 
-For the time being, I wm trying to compile with Ubuntu 15.10 I think here are some prerequisites to compile while enabling Python and Java sudo apt-get install automake python-dev libtool help2man gengetopt
+For now, my main goal is to be able to compile Open PACE and understand how I can use it in Android Studio.
 
-And here is the bash script I am using to try to compile (still not working yet)
+The idea would be to have a working version of Example.java that can be run from Android Studio.
 
-export MAKE_STANDALONE_TOOLCHAIN="/opt/Sdk/ndk-bundle/build/tools/make-standalone-toolchain.sh"
+I will try to make it work and report my findings there. Please feel free to contact me if you have some tips for me, problems when trying to compile or run things.
 
-export ANDROID_ARCH="arm"
+Last edits:
 
-git clone https://github.com/frankmorgner/openpace.git
-
-cd openpace
-
-test -x configure || autoreconf --verbose --install
-
-./configure --enable-java --enable-python --enable-openssl-install
-
-make android
-
-exit
+- Currently **I can't yet build the Android Studio project** because of some errors in the libraries. For sure, I made mistakes in the .so calls
+- I have been able to succesfully compile the latest OpenPACE version for Android. You can refer to the wiki page Compiling-OpenPACE-for-Android that I will try to keep updated with the latest information I find.
