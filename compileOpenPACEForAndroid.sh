@@ -5,11 +5,7 @@ export ANDROID_ARCH="arm"
 
 git clone https://github.com/frankmorgner/openpace.git
 cd openpace
-#autoreconf --verbose --install
-#./configure --enable-java --enable-openssl-install
-#make
-#
 test -x configure || autoreconf --verbose --install
-./configure --enable-java --enable-python --enable-openssl-install
+./configure --enable-java --enable-openssl-install
 make android
 exit

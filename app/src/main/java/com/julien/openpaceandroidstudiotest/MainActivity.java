@@ -2,12 +2,15 @@ package com.julien.openpaceandroidstudiotest;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import java.math.BigInteger;
+
+import com.julien.openpaceandroidstudiotest.models.eacJNI;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,10 +25,10 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                onClickFAB(view);
             }
         });
+
     }
 
     @Override
@@ -49,4 +52,13 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+    public void onClickFAB(View view) {
+        final byte[] EF_CARDACCESS = new BigInteger("318182300D060804007F00070202020201023012060A04007F000702020302020201020201413012060A04007F0007020204020202010202010D301C060904007F000702020302300C060704007F0007010202010D020141302B060804007F0007020206161F655041202D2042447220476D6248202D20546573746B617274652076322E3004491715411928800A01B421FA07000000000000000000000000000000000000201010291010", 16).toByteArray();
+        final byte[] PIN = "123456".getBytes();
+
+        eacJNI.EAC_init();
+    }
+
 }
