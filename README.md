@@ -1,4 +1,4 @@
-# WORK IN PROGRESS - Not yet functional
+# WORK IN PROGRESS - Not yet functional :(
 
 This project might evolve in a more consequent BAC/PACE passport reader.
 
@@ -10,5 +10,9 @@ I will try to make it work and report my findings there. Please feel free to con
 
 Last edits:
 
-- Currently **I can't yet build the Android Studio project** because of some errors in the libraries. For sure, I made mistakes in the .so calls
-- I have been able to succesfully compile the latest OpenPACE version for Android. You can refer to the wiki page Compiling-OpenPACE-for-Android that I will try to keep updated with the latest information I find.
+- Still having issues when trying to run code. The following error occurs even if the file is in the same .jar file
+lang.UnsatisfiedLinkError: dlopen failed: could not load library "libcrypto.so.1.0.0" needed by "libeac.so"; caused by library "libcrypto.so.1.0.0" not found
+
+Improvements
+- Successful compilation of the latest OpenPACE version for Android. You can refer to the wiki page Compiling-OpenPACE-for-Android that I will try to keep updated with the latest information I find.
+- Successful Android Studio's build that packs all of the .so and .so.x.x files into a jar file. Unfortunately, it is not good enough
